@@ -27,10 +27,12 @@
   (clerk/show! "notebooks/data_science.clj")
 
   ;; done
+
+
   (clerk/show! "notebooks/sicmutils.clj")
   (clerk/show! "notebooks/rule_30.clj")
   (clerk/show! "notebooks/semantic.clj")
-  
+
   ;; TODO If you would like more details about how Clerk works, here's a
   ;; notebook with some implementation details.
   (clerk/show! "notebooks/how_clerk_works.clj")
