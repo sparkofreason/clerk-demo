@@ -1,13 +1,11 @@
 ;; # 🚰 Tap Inspector
-(ns tap
+(ns ^:nextjournal.clerk/no-cache tap
   (:require [clojure.string :as str]
             [nextjournal.clerk :as clerk]))
 
 (defonce !taps (atom ()))
 
-^::clerk/no-cache @!taps
-
-(declare tapped words)
+@!taps
 
 (comment
 
@@ -19,6 +17,7 @@
 
   (tap> (set (take 5 (shuffle (str/split-lines (slurp "/usr/share/dict/words"))))))
 
+
   )
 
 
@@ -28,6 +27,6 @@
     (clerk/show! "notebooks/tap.clj")))
 
 (defonce setup
-  (add-tap tapped))
+  (add-tap #'tapped))
 
 #_(do (reset! !taps ()) (clerk/show! "notebooks/tap.clj"))

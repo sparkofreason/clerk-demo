@@ -1,5 +1,5 @@
 {:paths ["dev"]
- :deps {io.github.nextjournal/clerk        {:local/root "/Users/mk/Downloads/clerk-0.3.266.jar"}
+ :deps {io.github.nextjournal/clerk        {:local/root "/Users/mk/Downloads/clerk-0.3.267.jar"}
         ;; TODO: remove
         io.github.arachne-framework/valuehash {:git/sha "ff1d4b7f1260daf41c786a61cb45d02871b7baf9"}
         ;; input various external data formats
