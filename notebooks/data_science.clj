@@ -20,8 +20,11 @@
 #_(clerk/table
  (csv/read-csv (slurp "https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv")))
 
+(clerk/table (csv/read-csv "./datasets/iris.csv"))
+
 #_(clerk/clear-cache!)
 
+#_ ;; missing dataset
 (def worker-ceo-ratio
   (csv/read-csv "./datasets/worker-ceo-ratio.tsv"))
 
@@ -45,6 +48,7 @@
                  :field "Median Worker Pay"}
              :y {:aggregate "count"}}})
 
+#_
 (clerk/vl
  {:data {:values worker-ceo-ratio}
   :mark "rect"

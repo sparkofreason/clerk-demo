@@ -14,4 +14,17 @@
         ;; semantic web goodies and box/arrow graphs
         jackrusher/mundaneum               {:git/url "https://github.com/jackrusher/mundaneum/"
                                             :git/sha "84476918ee47b66a2d6128e1a90780e52fd2ae44"}
-        arrowic/arrowic                    {:mvn/version "0.1.1"}}}
+        arrowic/arrowic                    {:mvn/version "0.1.1"}}
+
+ :aliases
+ {:nextjournal/clerk
+  {:override-deps {io.github.nextjournal/clerk {:git/sha "621ccd6be65f96469e217c287534ab67ce968d67"}}
+   :extra-paths ["datasets"]
+   :exec-fn nextjournal.clerk/build-static-app!
+   :exec-args {:paths ["index.md"
+                       "notebooks/*.md"
+                       "notebooks/rule_30.clj"
+                       "notebooks/data_science.clj"
+                       "notebooks/sicmutils.clj"
+                       "notebooks/*tion.clj"
+                       "notebooks/*antic.clj"]}}}}
